@@ -3,6 +3,7 @@ using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using System;
 using System.Configuration;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DIGEVOIndicadoresBot.Dialogs
@@ -29,8 +30,7 @@ namespace DIGEVOIndicadoresBot.Dialogs
         [LuisIntent("conocer")]
         public async Task Conocer(IDialogContext context, LuisResult result)
         {
-            
-            await context.PostAsync($"You have reached the \"conocer\" intent. You said: {result.Query}, {result.Entities.ToString()}"); //
+            await context.PostAsync($"You have reached the \"conocer\" intent. You said: {result.Query}, {String.Join(", ", Enumerable.Select(result.Entities, e => e.ToString()).ToList())}"); //
             context.Wait(MessageReceived);
         }
     }
