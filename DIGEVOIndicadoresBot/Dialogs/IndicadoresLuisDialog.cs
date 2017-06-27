@@ -20,6 +20,7 @@ namespace DIGEVOIndicadoresBot.Dialogs
         //            ConfigurationManager.AppSettings.Get("LuisModelId"),
         //            ConfigurationManager.AppSettings.Get("LuisSubscriptionKey"))))
         {
+            Console.WriteLine("probando");
         }
 
         [LuisIntent("None")]
