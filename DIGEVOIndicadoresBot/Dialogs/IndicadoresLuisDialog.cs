@@ -1,9 +1,7 @@
-﻿using Microsoft.Bot.Builder.Azure;
-using Microsoft.Bot.Builder.Dialogs;
+﻿using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using System;
-using System.Configuration;
 using System.Threading.Tasks;
 
 namespace DIGEVOIndicadoresBot.Dialogs
@@ -14,12 +12,12 @@ namespace DIGEVOIndicadoresBot.Dialogs
         //var modelId = ConfigurationManager.AppSettings.Get("LuisModelId");
         //var subscriptionKey = ConfigurationManager.AppSettings.Get("LuisSubscriptionKey");
         //public IndicadoresLuisDialog() : base(new LuisService(new LuisModelAttribute(Utils.GetAppSetting("LuisAppId"), Utils.GetAppSetting("LuisAPIKey"))))
-        public IndicadoresLuisDialog() : base(new LuisService(new LuisModelAttribute("0bc42f76-e6dc-4716-befb-6b6dbcb537bd", "04e3a883c75341189f83ca05676255ac")))
-        //public IndicadoresLuisDialog() : base(
-        //    new LuisService(
-        //        new LuisModelAttribute(
-        //            ConfigurationManager.AppSettings.Get("LuisModelId"),
-        //            ConfigurationManager.AppSettings.Get("LuisSubscriptionKey"))))
+        //public IndicadoresLuisDialog() : base(new LuisService(new LuisModelAttribute("0bc42f76-e6dc-4716-befb-6b6dbcb537bd", "04e3a883c75341189f83ca05676255ac")))
+        public IndicadoresLuisDialog() : base(
+            new LuisService(
+                new LuisModelAttribute(
+                    System.Configuration.ConfigurationManager.AppSettings["LuisAppId"],
+                    System.Configuration.ConfigurationManager.AppSettings["LuisAPIKey"])))
         {
             Console.WriteLine("probando");
         }
