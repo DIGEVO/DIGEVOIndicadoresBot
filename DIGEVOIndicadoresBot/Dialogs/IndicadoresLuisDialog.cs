@@ -21,8 +21,8 @@ namespace DIGEVOIndicadoresBot.Dialogs
         public IndicadoresLuisDialog() : base(
             new LuisService(
                 new LuisModelAttribute(
-                    ConfigurationManager.AppSettings.Get("0bc42f76-e6dc-4716-befb-6b6dbcb537bd"),
-                    ConfigurationManager.AppSettings.Get("04e3a883c75341189f83ca05676255ac"))))
+                    ConfigurationManager.AppSettings.Get("LuisModelId"),
+                    ConfigurationManager.AppSettings.Get("LuisSubscriptionKey"))))
         {
         }
 
