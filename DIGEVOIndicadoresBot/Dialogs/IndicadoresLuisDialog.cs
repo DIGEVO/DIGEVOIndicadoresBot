@@ -26,7 +26,7 @@ namespace DIGEVOIndicadoresBot.Dialogs
         public async Task NoneIntent(IDialogContext context, LuisResult result)
         {
             //context.Activity
-            await context.PostAsync($"You have reached the none intent. You said: {result.Query}"); //
+            await context.PostAsync($"{context.Activity.From.Name}, You have reached the none intent. You said: {result.Query}"); //
             context.Wait(MessageReceived);
         }
 
