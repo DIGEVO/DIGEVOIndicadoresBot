@@ -30,7 +30,8 @@ namespace DIGEVOIndicadoresBot.Dialogs
         [LuisIntent("conocer")]
         public async Task Conocer(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync($"You have reached the \"conocer\" intent. You said: {result.Query}, {String.Join(", ", Enumerable.Select(result.Entities, e => e.ToString()).ToList())}"); //
+            var str = String.Join(", ", Enumerable.Select(result.Entities, e => $"{e.Entity.ToString()} {e.Type.ToString()} {e.EndIndex.ToString()}").ToList());
+            await context.PostAsync($"You have reached the \"conocer\" intent. You said: {result.Query}, {str}"); //
             context.Wait(MessageReceived);
         }
     }
