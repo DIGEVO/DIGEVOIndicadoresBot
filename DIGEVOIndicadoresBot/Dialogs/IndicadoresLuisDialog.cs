@@ -1,14 +1,10 @@
-﻿//using Microsoft.Bot.Builder.Azure;
+﻿using Microsoft.Bot.Builder.Azure;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
-using Microsoft.IdentityModel.Protocols;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace DIGEVOIndicadoresBot.Dialogs
 {
@@ -17,12 +13,12 @@ namespace DIGEVOIndicadoresBot.Dialogs
     {
         //var modelId = ConfigurationManager.AppSettings.Get("LuisModelId");
         //var subscriptionKey = ConfigurationManager.AppSettings.Get("LuisSubscriptionKey");
-        //public IndicadoresLuisDialog() : base(new LuisService(new LuisModelAttribute(Utils.GetAppSetting("LuisAppId"), Utils.GetAppSetting("LuisAPIKey"))))
-        public IndicadoresLuisDialog() : base(
-            new LuisService(
-                new LuisModelAttribute(
-                    ConfigurationManager.AppSettings.Get("LuisModelId"),
-                    ConfigurationManager.AppSettings.Get("LuisSubscriptionKey"))))
+        public IndicadoresLuisDialog() : base(new LuisService(new LuisModelAttribute(Utils.GetAppSetting("LuisAppId"), Utils.GetAppSetting("LuisAPIKey"))))
+        //public IndicadoresLuisDialog() : base(
+        //    new LuisService(
+        //        new LuisModelAttribute(
+        //            ConfigurationManager.AppSettings.Get("LuisModelId"),
+        //            ConfigurationManager.AppSettings.Get("LuisSubscriptionKey"))))
         {
         }
 
