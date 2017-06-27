@@ -1,0 +1,39 @@
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Bot Application.dll.config
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Bot Application.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Bot Application.pdb
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Autofac.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Chronic.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.Bot.Builder.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.Bot.Connector.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Newtonsoft.Json.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.Net.Http.Formatting.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.Web.Http.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.Web.Http.WebHost.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Autofac.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.Bot.Builder.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.Bot.Connector.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\Newtonsoft.Json.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.Net.Http.Formatting.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.Web.Http.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\System.Web.Http.WebHost.xml
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\en\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\es\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\obj\Debug\Bot Application.dll
+C:\Users\rigo\Google Drive\JOB\Digevo\Git\DIGEVOIndicadoresBot\DIGEVOIndicadoresBot\obj\Debug\Bot Application.pdb
