@@ -32,9 +32,21 @@ namespace DIGEVOIndicadoresBot.Dialogs
         [LuisIntent("conocer")]
         public async Task KnowIntent(IDialogContext context, LuisResult result)
         {
+            var str = String.Join(", ", Enumerable.Select(
+                result.Entities,
+                e => $"{e.Entity.ToString()} {e.Type.ToString()} {e.EndIndex.ToString()}")
+                .ToList());
+            await context.PostAsync($"Hola {context.Activity.From.Name}, entiendo que deseas \"conocer\" acerca de: {str}, " +
+                $"estamos trabajando para brindarte una mejor respuesta");
+            context.Wait(MessageReceived);
+        }
+
+        [LuisIntent("comparar")]
+        public async Task CompareIntent(IDialogContext context, LuisResult result)
+        {
             var str = String.Join(", ", Enumerable.Select(result.Entities, e => $"{e.Entity.ToString()} {e.Type.ToString()} {e.EndIndex.ToString()}").ToList());
-            var str1 = "";// String.Join(", ", Enumerable.SelectMany(result.CompositeEntities, ce => ce.Children.Select(cc => cc.Value)));
-            await context.PostAsync($"Hola {context.Activity.From.Name}, entiendo que deseas \"conocer\" acerca de: {result.Query}, {str} {str1}");
+            await context.PostAsync($"Hola {context.Activity.From.Name}, entiendo que deseas \"comparar\" con: {str} " +
+                $"estamos trabajando para brindarte una mejor respuesta");
             context.Wait(MessageReceived);
         }
     }

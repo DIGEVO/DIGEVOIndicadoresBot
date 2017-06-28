@@ -19,7 +19,6 @@ namespace DIGEVOIndicadoresBot
             if (activity.Type == ActivityTypes.Message)
             {
                 await Conversation.SendAsync(activity, () => new Dialogs.IndicadoresLuisDialog());
-                //await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
             }
             else
             {
