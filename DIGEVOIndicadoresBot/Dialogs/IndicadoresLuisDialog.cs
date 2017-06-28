@@ -21,7 +21,6 @@ namespace DIGEVOIndicadoresBot.Dialogs
         [LuisIntent("None")]
         public async Task NoneIntent(IDialogContext context, LuisResult result)
         {
-            //context.Activity
             //todo guardar cuando ya lo salude!
             var meridian = context.Activity.LocalTimestamp.Value.ToString("tt", CultureInfo.InvariantCulture).ToLower();
             var hour = context.Activity.LocalTimestamp.Value.Hour;
@@ -34,7 +33,7 @@ namespace DIGEVOIndicadoresBot.Dialogs
         public async Task KnowIntent(IDialogContext context, LuisResult result)
         {
             var str = String.Join(", ", Enumerable.Select(result.Entities, e => $"{e.Entity.ToString()} {e.Type.ToString()} {e.EndIndex.ToString()}").ToList());
-            var str1 = String.Join(", ", Enumerable.SelectMany(result.CompositeEntities, ce => ce.Children.Select(cc => cc.Value)));
+            var str1 = "";// String.Join(", ", Enumerable.SelectMany(result.CompositeEntities, ce => ce.Children.Select(cc => cc.Value)));
             await context.PostAsync($"Hola {context.Activity.From.Name}, entiendo que deseas \"conocer\" acerca de: {result.Query}, {str} {str1}");
             context.Wait(MessageReceived);
         }
