@@ -12,8 +12,9 @@ namespace DIGEVOIndicadoresBot.Dialogs
     [Serializable]
     public class IndicadoresLuisDialog : LuisDialog<object>
     {
-        public IndicadoresLuisDialog() : base(
-            new LuisService(new LuisModelAttribute(ConfigurationManager.AppSettings["LuisAppId"], ConfigurationManager.AppSettings["LuisAPIKey"])))
+        public IndicadoresLuisDialog() : base(new LuisService(new LuisModelAttribute(
+            ConfigurationManager.AppSettings["LuisAppId"], 
+            ConfigurationManager.AppSettings["LuisAPIKey"])))
         {
             //todo buscar la forma de realizar log.
         }
@@ -25,7 +26,7 @@ namespace DIGEVOIndicadoresBot.Dialogs
             var meridian = context.Activity.LocalTimestamp.Value.ToString("tt", CultureInfo.InvariantCulture).ToLower();
             var hour = context.Activity.LocalTimestamp.Value.Hour;
             var greetings = meridian == "am" ? "buenos días" : hour >= 19 ? "buenas noches" : "buenas tardes";
-            await context.PostAsync($"Hola {context.Activity.From.Name}, {greetings}, disculpa ¿puedes repetir tu pregunta?: {result.Query}");
+            await context.PostAsync($"Hola {context.Activity.From.Name.Split(' ')[0]}, {greetings}, disculpa ¿puedes repetir tu pregunta?: {result.Query}");
             context.Wait(MessageReceived);
         }
 
