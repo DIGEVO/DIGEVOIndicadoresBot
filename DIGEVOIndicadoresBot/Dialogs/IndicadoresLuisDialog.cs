@@ -19,14 +19,17 @@ namespace DIGEVOIndicadoresBot.Dialogs
             //todo buscar la forma de realizar log.
         }
 
+        [LuisIntent("")]
         [LuisIntent("None")]
         public async Task NoneIntent(IDialogContext context, LuisResult result)
         {
-            //todo guardar cuando ya lo salude!
             var meridian = context.Activity.LocalTimestamp.Value.ToString("tt", CultureInfo.InvariantCulture).ToLower();
             var hour = context.Activity.LocalTimestamp.Value.Hour;
             var greetings = meridian == "am" ? "buenos días" : hour >= 19 ? "buenas noches" : "buenas tardes";
-            await context.PostAsync($"Hola {context.Activity.From.Name.Split(' ')[0]}, {greetings}, disculpa ¿puedes repetir tu pregunta?: {result.Query}");
+            var firstName = context.Activity.From.Name.Split(' ')[0];
+
+            await context.PostAsync($"Hola {firstName}, {greetings}, disculpa ¿puedes repetir tu pregunta?, no entiendo '{result.Query}'");
+
             context.Wait(MessageReceived);
         }
 

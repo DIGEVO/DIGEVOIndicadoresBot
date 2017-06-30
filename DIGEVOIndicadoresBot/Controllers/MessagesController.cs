@@ -4,20 +4,34 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using System.Configuration;
+using DIGEVOIndicadoresBot.SpellCheckerController;
+using System;
+using System.Diagnostics;
 
 namespace DIGEVOIndicadoresBot
 {
     [BotAuthentication]
     public class MessagesController : ApiController
     {
-        /// <summary>
-        /// POST: api/Messages
-        /// Receive a message from a user and reply to it
-        /// </summary>
+        private static readonly bool IsSpellCorrectionEnabled = bool.Parse(ConfigurationManager.AppSettings["IsSpellCorrectionEnabled"]);
+        private readonly BingSpellCheckService spellService = new BingSpellCheckService();
+
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
             if (activity.Type == ActivityTypes.Message)
             {
+                if (IsSpellCorrectionEnabled)
+                {
+                    try
+                    {
+                        activity.Text = await this.spellService.GetCorrectedTextAsync(activity.Text);
+                    }
+                    catch (Exception ex)
+                    {
+                        Trace.TraceError(ex.ToString());
+                    }
+                }
                 await Conversation.SendAsync(activity, () => new Dialogs.IndicadoresLuisDialog());
             }
             else
