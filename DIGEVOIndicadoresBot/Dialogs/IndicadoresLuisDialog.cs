@@ -40,7 +40,12 @@ namespace DIGEVOIndicadoresBot.Dialogs
                 result.Entities,
                 e => $"{e.Entity.ToString()} {e.Type.ToString()} {e.EndIndex.ToString()}")
                 .ToList());
-            await context.PostAsync($"Hola {context.Activity.From.Name}, entiendo que deseas \"conocer\" acerca de: {str}, " +
+            var meridian = context.Activity.LocalTimestamp.Value.ToString("tt", CultureInfo.InvariantCulture).ToLower();
+            var hour = context.Activity.LocalTimestamp.Value.Hour;
+            var greetings = meridian == "am" ? "buenos días" : hour >= 19 ? "buenas noches" : "buenas tardes";
+            var firstName = context.Activity.From.Name.Split(' ')[0];
+
+            await context.PostAsync($"Hola {firstName}, {greetings}, entiendo que deseas \"conocer\" acerca de: {str}, " +
                 $"estamos trabajando para brindarte una mejor respuesta");
             context.Wait(MessageReceived);
         }
@@ -48,8 +53,16 @@ namespace DIGEVOIndicadoresBot.Dialogs
         [LuisIntent("comparar")]
         public async Task CompareIntent(IDialogContext context, LuisResult result)
         {
-            var str = String.Join(", ", Enumerable.Select(result.Entities, e => $"{e.Entity.ToString()} {e.Type.ToString()} {e.EndIndex.ToString()}").ToList());
-            await context.PostAsync($"Hola {context.Activity.From.Name}, entiendo que deseas \"comparar\" con: {str} " +
+            var str = String.Join(", ", Enumerable.Select(
+                result.Entities, 
+                e => $"{e.Entity.ToString()} {e.Type.ToString()} {e.EndIndex.ToString()}")
+                .ToList());
+            var meridian = context.Activity.LocalTimestamp.Value.ToString("tt", CultureInfo.InvariantCulture).ToLower();
+            var hour = context.Activity.LocalTimestamp.Value.Hour;
+            var greetings = meridian == "am" ? "buenos días" : hour >= 19 ? "buenas noches" : "buenas tardes";
+            var firstName = context.Activity.From.Name.Split(' ')[0];
+
+            await context.PostAsync($"Hola {firstName}, {greetings}, entiendo que deseas \"comparar\" con: {str} " +
                 $"estamos trabajando para brindarte una mejor respuesta");
             context.Wait(MessageReceived);
         }
