@@ -21,6 +21,7 @@ namespace DIGEVOIndicadoresBot
         {
             if (activity.Type == ActivityTypes.Message)
             {
+                activity.Text = activity.Text.ToLower();
                 if (IsSpellCorrectionEnabled)
                 {
                     try
